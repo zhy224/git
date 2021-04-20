@@ -2,7 +2,9 @@
 # Linux 使用 git 上传代码到 GitHub
 # --------------------------生成rsa--------------------------
 git config --global user.name 'zhy224'
+
 git config --global user.email '412724740@exp.com'
+
 ssh-keygen -t rsa -C “412724740@exp.com”
 # ----------添加id_rsa.pub内容到GitHub账号ssh中----------
 sudo vim ~/.ssh/id_rsa.pub
@@ -10,7 +12,9 @@ sudo vim ~/.ssh/id_rsa.pub
 ssh -v git@github.com
 # ---------创建本地仓库------------
 git init
+
 git add .
+
 git commit  -m 'comment'
 # ------------------------创建远程连接----------------------
 git remote add origin https://github.com/zhy224/xxx.git
@@ -18,6 +22,7 @@ git remote add origin https://github.com/zhy224/xxx.git
 git push origin master
 # 输入github账号密码
 zhy224
+
 zy04110224
 # ------------------------删除本地分支---------------------
 # 查看本地分支
